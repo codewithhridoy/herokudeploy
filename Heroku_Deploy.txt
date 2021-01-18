@@ -1,0 +1,50 @@
+0. Setup Heroku on your machine
+
+1. heroku login
+
+2. git init
+
+3. git add .
+
+4. git commit -m "First Commit"
+
+5. heroku create appname
+
+6. heroku git:remote -a appname
+
+7. Activate Virtual Environment
+
+8. pip install gunicorn
+
+9. Create Procfile
+
+10. Edit Procfile:
+	web: gunicorn wsgifilepathname.wsgi
+	
+11. heroku local
+
+12. pip freeze > requirements.txt
+
+13. git add .
+
+14. git commit -m "Content"
+
+15. git push heroku HEAD:master
+
+16. Edit Allowed Host in settings.py
+
+17. Edit Database
+
+18. Set DEBUG = False
+
+19. python manage.py migrate
+
+20. git add .
+
+21. git commit -m "Migration & Deployment done"
+
+22. git push heroku HEAD:master
+
+23. heroku run python manage.py createsuperuser
+
+24. git push heroku HEAD:master
